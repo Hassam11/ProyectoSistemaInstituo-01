@@ -6,17 +6,15 @@ import GestionarHorariosTrabajadores from "./Pages/RRHH/GestionarHorariosTrabaja
 import GestionarContratosTrabajadores from "./Pages/RRHH/GestionarContratosTrabajadores";
 import GestionarAsistenciaTrabajadores from "./Pages/RRHH/GestionarAsistenciaTrabajadores";
 import GestionarBoletaPagoTrabajadores from "./Pages/RRHH/GestionarBoletaPagoTrabajadores";
+import HorarioRRHH from "./Pages/HorarioRRHH";
+import Trabajador from "./Pages/Trabajador";
+import ContratoTrabajador from "./Pages/Trabajador/ContratoTrabajador";
+import HorarioTrabajador from "./Pages/Trabajador/HorarioTrabajador";
+import BoletaDePago from "./Pages/Trabajador/BoletaDePago";
+import RegistrosEntradaYSalida from "./Pages/Trabajador/RegistrosEntradaYSalida";
+import BoletadePagoRRHH from "./Pages/RRHH/BoletadePagoRRHH";
 
 function App() {
-  //Trabajador
-  //<Route path="/Trabajador" element={<Trabajador />} />
-  //<Route path="/contratoTrabajador" element={<ContratoTrabajador />} />
-  //<Route path="/horarioTrabajador" element={<HorarioTrabajador />} />
-  //RRHH
-  //  <Route path="/gestionarContratos" element={<GestionarContratos/>} />
-  //<Route path="/gestionarHorarios" element={<GestionarHorarios/>} />
-  //<Route path="/gestionaraBoletasDePago" element={<GestionarBoletas/>} />
-  //<Route path="/GestionarAsistencia" element={<GestiionarAsistencia/>} />
   return (
     <div>
       <BrowserRouter>
@@ -28,6 +26,14 @@ function App() {
           <Route path="/GestionarContratosTrabajadores" element={<GestionarContratosTrabajadores/>} />
           <Route path="/GestionarAsistenciaTrabajadores" element={<GestionarAsistenciaTrabajadores/>} />
           <Route path="/GestionarBoletaPagoTrabajadores" element={<GestionarBoletaPagoTrabajadores/>} />
+          <Route path="/HorarioRRHH" element={<HorarioRRHH/>} />
+
+          <Route path="/Trabajador" element={<Trabajador />} />
+          <Route path="/BoletadePagoRRHH" element={<BoletadePagoRRHH />} />
+          <Route path="/ContratoTrabajador" element={<ContratoTrabajador />} />
+          <Route path="/HorarioTrabajador" element={<HorarioTrabajador />} />
+          <Route path="/BoletasdePago" element={<BoletaDePago/>} />
+          <Route path="/RegistrosEntradaYSalida" element={<RegistrosEntradaYSalida/>} />
         </Routes>
       </BrowserRouter>
     </div>

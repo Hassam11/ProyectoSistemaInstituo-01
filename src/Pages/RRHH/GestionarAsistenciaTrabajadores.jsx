@@ -1,5 +1,6 @@
 import React from "react";
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 const GestionarAsistenciaTrabajadores = () => {
   const ref = useRef([]);
@@ -13,6 +14,15 @@ const GestionarAsistenciaTrabajadores = () => {
       <h2 className="text-center bg-blue-500 text-white text-3xl px-10 py-3 ">
         Gestionar Asistencia de Trabajadores
       </h2>
+      <div className="m-5">
+          <Link
+            type="button"
+            class="text-gray-900 bg-gray-100  hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-base px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 mr-2 mb-2 "
+            to="/GestionarTrabajadores"
+          >
+            Volver
+          </Link>
+      </div>
       <div className="container max-w-3xl px-4 mx-auto sm:px-8">
         <div className="py-8">
           <div className="flex flex-row justify-between w-full mb-1 sm:mb-0">

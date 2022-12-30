@@ -1,46 +1,36 @@
 import { useState } from "react";
-import image from "../imgs/perfil_1.png";
+import image from "../imgs/WalterMitty.jpg";
 import { Link } from "react-router-dom";
 
 const LinksPages = [
   {
     id: 1,
-    to: "/gestionarTrabajadores",
-    nombreUrls: "Gestionar Trabajadores",
+    to: "/ContratoTrabajador",
+    nombreUrls: "Contrato",
   },
   {
     id: 2,
-    to: "/HorarioRRHH",
+    to: "/HorarioTrabajador",
     nombreUrls: "Horario Trabajador",
   },
   {
     id: 3,
-    to: "/BoletadePagoRRHH",
+    to: "/BoletasdePago",
     nombreUrls: "Boletas de Pago",
   },
   {
     id: 4,
-    to: "/registrosEntradaYSalida",
+    to: "/RegistrosEntradaYSalida",
     nombreUrls: "Registros de entrada y salida",
   },
 ];
 
-const RRHH = () => {
-  const url = "http://localhost:4000/trabajadores";
-  const fetchApi = async () => {
-    const response = await fetch("http://localhost:4000/trabajadores", {
-      "method": "GET",
-      "content-type": "application/json; charset=utf-8",
-    });
-
-    const data = await response;
-    console.log(data);
-  };
-  fetchApi();
+const Trabajador = () => {
+ 
   return (
     <div className="bg-white h-screen m-auto items-center justify-center place-self-center">
       <h2 className="text-center bg-blue-500 text-white text-3xl px-10 py-3 ">
-        Recursos Humanos
+        Trabajador
       </h2>
       <div className="container p-4 m-auto ">
         <div className="grid grid-cols-3 col-span-2">
@@ -49,7 +39,7 @@ const RRHH = () => {
               src={image}
               alt="asdasd"
               width={300}
-              className="rounded-lg mb-2"
+              className="rounded-lg mb-2  h-80 "
             />
             <p className="pt-2 text-lg font-semibold text-center">
               Hassam Alberto Chinga Huamani
@@ -108,4 +98,4 @@ const RRHH = () => {
   );
 };
 
-export default RRHH;
+export default Trabajador;

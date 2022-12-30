@@ -26,15 +26,24 @@ const LinksTrabajadores = [
 
 const GestionarTrabajadores = () => {
   return (
-    <div>
-      <h2 className="text-center bg-blue-500 text-white text-3xl px-10 py-3  h-screen ">
+    <div className="bg-white h-full w-full">
+      <h2 className="text-center bg-blue-500 text-white text-3xl px-10 py-3  ">
         Gestionar Trabajadores
       </h2>
-      <div className="bg-white  col-span-2 grid grid-cols-2 rounded-lg shadow-2xl  gap-28 items-center text-center place-items-center w-full  h-screen">
+      <div className="m-5">
+          <Link
+            type="button"
+            class="text-gray-900 bg-gray-100  hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-base px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 mr-2 mb-2 "
+            to="/RRHH"
+          >
+            Volver
+          </Link>
+      </div>
+      <div className="bg-h-full w-full col-span-2 grid grid-cols-2 rounded-lg shadow-2xl  gap-28 items-center text-center place-items-center ">
         {LinksTrabajadores.map((item, index) => {
           return (
             <Link
-            key={item.id}
+              key={item.id}
               className="text-center border rounded-lg p-4 hover:shadow-2xl transition-all"
               to={item.to}
             >

@@ -39,7 +39,7 @@ const GestionarTrabajadores = () => {
             Volver
           </Link>
       </div>
-      <div className="bg-h-full w-full col-span-2 grid grid-cols-2 rounded-lg shadow-2xl  gap-28 items-center text-center place-items-center ">
+      <div className=" w-1/3 col-span-2 grid grid-cols-2 rounded-lg shadow-2xl gap-16 p-12  items-center text m-auto center place-items-center  ">
         {LinksTrabajadores.map((item, index) => {
           return (
             <Link

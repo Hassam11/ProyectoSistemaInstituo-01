@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const GestionarContratosTrabajadores = () => {
+  
   function addContratos() {
-    alert("agregar Contratos")
+    alert("Editar Contratos");
   }
 
   function editarContratos() {
-    alert("Editar Contratos")
+    alert("Editar Contratos");
   }
   return (
     <div>
@@ -17,13 +19,12 @@ const GestionarContratosTrabajadores = () => {
       <div className="m-5">
         <Link
           type="button"
-          class="text-gray-900 bg-gray-100  hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-base px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 mr-2 mb-2 "
+          className="text-gray-900 bg-gray-100  hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-base px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 mr-2 mb-2 "
           to="/GestionarTrabajadores"
         >
           Volver
         </Link>
       </div>
-      
 
       <div className="container mx-auto sm:px-8">
         <div className="py-8">
@@ -47,24 +48,26 @@ const GestionarContratosTrabajadores = () => {
                 </button>
               </form>
               <div className="text-right">
-                <button onClick={addContratos} class="group relative h-12 w-12 overflow-hidden rounded-full bg-purple-600 text-lg shadow text-center">
-                  <div class="absolute inset-0 w-3 bg-purple-700  transition-all duration-[250ms] ease-out group-hover:w-full text-center"></div>
-                  <span class="relative text-white group-hover:text-white text-center">
+
+                <button
+                  className="group relative h-12 w-12 overflow-hidden rounded-full bg-purple-600 text-lg shadow text-center"
+                >
+                  <Link to="/NuevoContrato">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                       stroke="currentColor"
-                      class="w-10 h-10"
+                      className="w-10 h-10"
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         d="M12 4.5v15m7.5-7.5h-15"
                       />
                     </svg>
-                  </span>
+                  </Link>
                 </button>
               </div>
             </div>
@@ -120,7 +123,10 @@ const GestionarContratosTrabajadores = () => {
                       <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
                         <div className="flex items-center">
                           <div className="flex-shrink-0">
-                            <button onClick={editarContratos} className="relative block" >
+                            <button
+                              onClick={editarContratos}
+                              className="relative block"
+                            >
                               <img
                                 alt="profil"
                                 src="/images/person/8.jpg"
@@ -153,10 +159,7 @@ const GestionarContratosTrabajadores = () => {
                       </td>
 
                       <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
-                        <button
-                          className="text-gray-900 whitespace-no-wrap"
-                          
-                        >
+                        <button className="text-gray-900 whitespace-no-wrap">
                           Mirar Contrato
                         </button>
                       </td>
@@ -182,7 +185,9 @@ const GestionarContratosTrabajadores = () => {
             </div>
           </div>
         </div>
+        
       </div>
+      
     </div>
   );
 };

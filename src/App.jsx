@@ -13,6 +13,7 @@ import HorarioTrabajador from "./Pages/Trabajador/HorarioTrabajador";
 import BoletaDePago from "./Pages/Trabajador/BoletaDePago";
 import RegistrosEntradaYSalida from "./Pages/Trabajador/RegistrosEntradaYSalida";
 import BoletadePagoRRHH from "./Pages/RRHH/BoletadePagoRRHH";
+import NuevoContrato from "./Pages/RRHH/NuevoContrato";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />
+          
           <Route path="/RRHH" element={<RRHH />} />
           <Route path="/GestionarTrabajadores" element={<GestionarTrabajadores />} />
           <Route path="/GestionarHorariosTrabajadores" element={<GestionarHorariosTrabajadores />} />
@@ -34,6 +36,7 @@ function App() {
           <Route path="/HorarioTrabajador" element={<HorarioTrabajador />} />
           <Route path="/BoletasdePago" element={<BoletaDePago/>} />
           <Route path="/RegistrosEntradaYSalida" element={<RegistrosEntradaYSalida/>} />
+          <Route path="/NuevoContrato" element={<NuevoContrato/>} />
         </Routes>
       </BrowserRouter>
     </div>
